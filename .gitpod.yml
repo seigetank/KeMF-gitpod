@@ -1,0 +1,8 @@
+image: ghcr.io/gitpod-io/workspace-java:17
+ports:
+  - port: 8080
+    onOpen: open-preview
+tasks:
+  - name: dev
+    init: mvn -q -DskipTests package
+    command: mvn -DskipTests spring-boot:run
